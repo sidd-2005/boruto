@@ -141,7 +141,7 @@ async def encod(event):
         encode_channel_id = -1001421206846
         xx = ts(int((ees - es).seconds) * 1000)
         ds = await e.client.send_file(
-            encode_channel_id, file=ok, caption=" ", force_document=True, thumb=thum
+            encode_channel_id, file=ok, force_document=True, thumb=thum
         )
         await nnn.delete()
         org = int(Path(dl).stat().st_size)

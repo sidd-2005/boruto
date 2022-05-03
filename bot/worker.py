@@ -31,16 +31,9 @@ async def stats(e):
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
 
-encode_channel_id = "-1001119812525"
-filz_channel_id = -1001119812525
-status_channel_id = -1001638214016
+
 async def encod(event):
     try:
-        if not event.is_channel:
-            return
-        event.sender
-        if str(event.sender_id) in encode_channel_id:
-            return
         if not event.media:
             return
         if hasattr(event.media, "document"):
@@ -98,30 +91,27 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("SubsPlease", "ANIMEXT")
-        gg = hh
-        gg = gg.replace("SlyFox", "ANIMEXT")
-        ss = gg
-        ss = ss.replace("_", " ")          
-        jj = ss
-        jj = jj.replace("1080p", "720p x264")
-        mm = ' '.join(jj.split()[:-1])
+        hh = hh.replace("Judas", "AD")
+        jj = hh
+        jj = jj.replace("Ember", "AD")        
+        aa = jj.split(".")[-1]
         rr = f"encode"
-        bb = f"{mm}.mkv"                       
+        bb = jj.replace(f".{aa}", ".mkv")                       
+        bb = bb.replace("_", " ")
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
         e = xxx
         hehe = f"{out};{dl};0"
         wah = code(hehe)
-        nn = await e.client.send_message(status_channel_id,
-            mm,
-                    buttons=[
+        nn = await e.edit(
+            "**ENCODING FOR @sidd_2005**",
+            buttons=[
                 [Button.inline("Sᴛᴀᴛᴜs 📊", data=f"stats{wah}")],
                 [Button.inline("Cᴀɴᴄᴇʟ 🗑️", data=f"skip{wah}")],
             ],
         )
-        cmd = FFMPEG.format(dl, out)
+        cmd =FFMPEG.format(dl,out)
         process = await asyncio.create_subprocess_shell(
             cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
@@ -129,7 +119,7 @@ async def encod(event):
         er = stderr.decode()
         try:
             if er:
-                await e.edit(str(er) + "\n**ERROR** \nContact : \nOwner : @ANIMEXTLIVE")
+                await e.edit(str(er) + "\n**ERROR** \nContact : \nOwner : @Sidd_2005")
                 WORKING.clear()
                 os.remove(dl)
                 return os.remove(out)
@@ -137,9 +127,8 @@ async def encod(event):
             pass
         ees = dt.now()
         ttt = time.time()
-        nnn = await nn.edit("🚀`Uploading...`", 
-                    buttons=[Button.inline("Cᴀɴᴄᴇʟ 🗑️", data=f"skip{wah}")],
-            )
+        await nn.delete()
+        nnn = await e.client.send_message(e.chat_id, "🚀`Uploading...`")
         with open(out, "rb") as f:
             ok = await upload_file(
                 client=e.client,
@@ -149,19 +138,18 @@ async def encod(event):
                     progress(d, t, nnn, ttt, "uploading..")
                 ),
             )
+        encode_channel_id = -1001421206846
+        xx = ts(int((ees - es).seconds) * 1000)
         ds = await e.client.send_file(
-             filz_channel_id, file=ok, caption=mm.replace("ANIMEXT", "[ANIMEXT](https://t.me/Latest_Ongoing_Airing_Anime)"), force_document=True, thumb=thum
+            encode_channel_id, file=ok, caption= "⚡1080P Encoded sucessfully✅ in " + xx, force_document=True, thumb=thum
         )
-        await nnn.edit(mm + " Encoded Successfully✅",                   
-                       buttons=[]
-                      )
+        await nnn.delete()
         org = int(Path(dl).stat().st_size)
         com = int(Path(out).stat().st_size)
         pe = 100 - ((com / org) * 100)
         per = str(f"{pe:.2f}") + "%"
         eees = dt.now()
         x = dtime
-        xx = ts(int((ees - es).seconds) * 1000)
         xxx = ts(int((eees - ees).seconds) * 1000)
         a1 = await info(dl, e)
         a2 = await info(out, e)

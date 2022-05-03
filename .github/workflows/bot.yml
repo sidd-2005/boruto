@@ -3,7 +3,7 @@ on:
     schedule:
       - cron: "0 */6 * * *"
     push:
-      branches: [ Acc-Support ]
+      branches: [ main ]
     workflow_dispatch:
     
 env:
@@ -11,7 +11,7 @@ env:
   API_HASH: "${{ secrets.API_HASH }}"
   OWNER: "${{ secrets.OWNER }}"
   BOT_TOKEN: "${{ secrets.BOT_TOKEN }}"
-  LOG: "${{ secrets.LOG }}"
+  
    
 
 
@@ -22,7 +22,7 @@ jobs:
     steps:
        - uses: actions/checkout@v2
          with:
-            ref: Acc-Support
+            ref: main
        - uses: styfle/cancel-workflow-action@0.9.0
          name: "Cancelling duplicate workflow runs"
          with:

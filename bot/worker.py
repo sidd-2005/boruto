@@ -94,7 +94,7 @@ async def encod(event):
         hh = hh.replace("Judas", "AD")
         jj = hh
         jj = jj.replace("ASW", "AD")        
-        aa = jj.split(".")[-1]
+        aa = ' '.join(jj.split()[:-1])
         rr = f"encode"
         bb = jj.replace(f".{aa}", ".mkv")                       
         bb = bb.replace("_", " ")

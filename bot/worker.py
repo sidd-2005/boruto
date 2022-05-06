@@ -93,8 +93,9 @@ async def encod(event):
         hh = kk
         hh = hh.replace("ASW", "AD")
         jj = hh
-        jj = jj.replace("EMBER", "AD")        
-        aa = jj.replace(kk[-14:], "@animedirectoryy.mkv")
+        jj = jj.replace("EMBER", "AD") 
+        aa = jj       
+        aa = aa.replace(kk[-14:], ".mkv")
         rr = f"encode"
         bb = jj.replace(f".{aa}", ".mkv")                       
         bb = bb.replace("_", " ")

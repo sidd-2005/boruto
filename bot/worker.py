@@ -97,7 +97,7 @@ async def encod(event):
         aa = jj       
         aa = aa.replace("Judas", "AD")
         rr = f"encode"
-        bb = jj.replace(f".{aa}", ".mkv")                       
+        bb = aa.replace(f".{aa}", ".mkv")                       
         bb = bb.replace("_", " ")
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"

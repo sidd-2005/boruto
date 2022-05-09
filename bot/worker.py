@@ -114,6 +114,7 @@ async def encod(event):
         dtime = ts(int((es - s).seconds) * 1000)
         e = xxx
         hehe = f"{out};{dl};0"
+        fps = 10 / tsec
         wah = code(hehe)
         nn = await e.client.send_message(status_channel_id,
             mm,
@@ -122,9 +123,9 @@ async def encod(event):
                 [Button.inline("Cᴀɴᴄᴇʟ 🗑️", data=f"skip{wah}")],
             ],
         )
-        cmd = FFMPEG.format(dl, out)
+        ncmd = f"ffmpeg -i '{dl}' -vf fps={fps} -vframes 1 '{wah}/pic%01d.png'"
         process = await asyncio.create_subprocess_shell(
-            cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            ncmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
         er = stderr.decode()
@@ -151,7 +152,7 @@ async def encod(event):
                 ),
             )
         ds = await e.client.send_file(
-               filz_channel_id, file=ok, caption=mm.replace("AD", "[AD](https://t.me/animedirectoryy)"), force_document=True, thumb=thum
+               filz_channel_id, file=ok, caption=mm.replace("AD", "📥"), force_document=False, thumb=thum
         )
         await nnn.edit(mm + " Encoded Successfully✅",                   
                        buttons=[]

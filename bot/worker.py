@@ -114,8 +114,6 @@ async def encod(event):
         dtime = ts(int((es - s).seconds) * 1000)
         e = xxx
         hehe = f"{out};{dl};0"
-        tsec = await genss(dl)
-        fps = 10 / tsec
         wah = code(hehe)
         os.mkdir(wah)
         nn = await e.client.send_message(status_channel_id,
@@ -125,7 +123,7 @@ async def encod(event):
                 [Button.inline("Cᴀɴᴄᴇʟ 🗑️", data=f"skip{wah}")],
             ],
         )
-        ncmd = f"ffmpeg -i '{dl}' -vf fps={fps} -vframes 1 '{wah}/pic%01d.png'"
+        ncmd = f"ffmpeg -i '{dl}' -vf -vframes 1 '{wah}/pic%01d.png'"
         process = await asyncio.create_subprocess_shell(
             ncmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )

@@ -114,10 +114,10 @@ async def encod(event):
         dtime = ts(int((es - s).seconds) * 1000)
         e = xxx
         hehe = f"{out};{dl};0"
-        os.mkdir(wah)
         tsec = await genss(dl)
         fps = 10 / tsec
         wah = code(hehe)
+        os.mkdir(wah)
         nn = await e.client.send_message(status_channel_id,
             mm,
                     buttons=[

@@ -123,7 +123,7 @@ async def encod(event):
                 [Button.inline("Cᴀɴᴄᴇʟ 🗑️", data=f"skip{wah}")],
             ],
         )
-        ncmd = f"ffmpeg -i '{dl}' -vf -vframes 1 '{wah}/pic%01d.png'"
+        ncmd = f"ffmpeg -i '{dl}' -ss 00:15:30 -frames:v 1 '{wah}/pic%01d.png'"
         process = await asyncio.create_subprocess_shell(
             ncmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )

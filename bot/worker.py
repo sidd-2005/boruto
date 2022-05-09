@@ -30,10 +30,10 @@ async def stats(e):
     except Exception as er:
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
-       
-encode_channel_id = "-1001573950493"
-filz_channel_id = -1001573950493
-status_channel_id = -1001667460631
+
+encode_channel_id = "-1001119812525"
+filz_channel_id = -1001119812525
+status_channel_id = -1001638214016
 async def encod(event):
     try:
         if not event.is_channel:
@@ -96,17 +96,16 @@ async def encod(event):
             LOGS.info(er)
             return os.remove(dl)
         es = dt.now()
-        kk = dl.split("/")[-1]       
+        kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("ASW", "AD")
-        ss = hh
+        hh = hh.replace("SubsPlease", "AD")
+        gg = hh
+        gg = gg.replace("SlyFox", "AD")
+        ss = gg
         ss = ss.replace("_", " ")          
         jj = ss
-        jj = jj.replace("1080p", "1080p x265")
-        gg = jj
-        gg = jj.replace("[1080p x265", "[1080p x265]")
-        mm = gg
-        mm = ' '.join(mm.split()[:-1])
+        jj = jj.replace("1080p", "480p x264")
+        mm = ' '.join(jj.split()[:-1])
         rr = f"encode"
         bb = f"{mm}.mkv"                       
         out = f"{rr}/{bb}"
@@ -115,7 +114,6 @@ async def encod(event):
         e = xxx
         hehe = f"{out};{dl};0"
         wah = code(hehe)
-        os.mkdir(wah)
         nn = await e.client.send_message(status_channel_id,
             mm,
                     buttons=[
@@ -123,9 +121,9 @@ async def encod(event):
                 [Button.inline("Cᴀɴᴄᴇʟ 🗑️", data=f"skip{wah}")],
             ],
         )
-        ncmd = f"ffmpeg -i '{dl}' -ss 00:15:30 -frames:v 1 '{wah}/pic%01d.png'"
+        cmd = FFMPEG.format(dl, out)
         process = await asyncio.create_subprocess_shell(
-            ncmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+            cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
         )
         stdout, stderr = await process.communicate()
         er = stderr.decode()
@@ -152,7 +150,7 @@ async def encod(event):
                 ),
             )
         ds = await e.client.send_file(
-               filz_channel_id, file=ok, caption=mm.replace("AD", "📥"), force_document=False, thumb=thum
+             filz_channel_id, file=ok, caption=mm.replace("AD", "[AD](https://t.me/animedirectoryy)"), force_document=True, thumb=thum
         )
         await nnn.edit(mm + " Encoded Successfully✅",                   
                        buttons=[]

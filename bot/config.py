@@ -23,7 +23,7 @@ try:
     OWNER = config("OWNER")
     FFMPEG = config(
         "FFMPEG",
-        default='ffmpeg -i "{}" -r 1 -s 1280x720 -f image2 screenshot-%03d.png "{}"',
+        default='ffmpeg -i "{}" -ss 00:00:50 -frames:v 1 "{}"',
     )
     THUMB = config(
         "THUMBNAIL", default="www.google.com"

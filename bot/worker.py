@@ -100,7 +100,7 @@ async def encod(event):
         hh = kk
         hh = hh.replace("ASW", "AD")
         ss = hh
-        ss = ss.replace("_", " ")          
+        ss = ss.replace("Cleo", "AD")          
         jj = ss
         jj = jj.replace("1080p", "1080p x265")
         gg = jj

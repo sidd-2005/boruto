@@ -100,7 +100,7 @@ async def encod(event):
         hh = kk
         hh = hh.replace("SubsPlease", " ")
         gg = hh
-        gg = gg.replace("[SubsPlease]", " ")
+        gg = gg.replace("[]", " ")
         ss = gg
         ss = ss.replace("_", " ")          
         jj = ss

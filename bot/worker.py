@@ -150,7 +150,7 @@ async def encod(event):
                 ),
             )
         ds = await e.client.send_file(
-             filz_channel_id, file=ok, caption=mm.replace("AD", "[AD](https://t.me/animedirectoryy)"), force_document=True, thumb=thum
+             filz_channel_id, file=ok, force_document=True, thumb=thum
         )
         await nnn.edit(mm + " Encoded Successfully✅",                   
                        buttons=[]

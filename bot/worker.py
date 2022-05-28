@@ -31,8 +31,8 @@ async def stats(e):
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
 
-encode_channel_id = "-1001592627525"
-filz_channel_id = -1001592627525
+encode_channel_id = "-1001777931442"
+filz_channel_id = -1001777931442
 status_channel_id = -1001667460631
 async def encod(event):
     try:

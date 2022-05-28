@@ -31,8 +31,8 @@ async def stats(e):
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
        
-encode_channel_id = "-1001603186705"
-filz_channel_id = -1001603186705
+encode_channel_id = "-1001592627525"
+filz_channel_id = -1001592627525
 status_channel_id = -1001667460631
 async def encod(event):
     try:
@@ -98,7 +98,7 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]       
         hh = kk
-        hh = hh.replace("ASW", "AD")
+        hh = hh.replace("ASW", " ")
         ss = hh
         ss = ss.replace("Judas", "AD")          
         jj = ss
@@ -151,7 +151,7 @@ async def encod(event):
                 ),
             )
         ds = await e.client.send_file(
-               filz_channel_id, file=ok, caption=mm.replace("AD", "[AD](https://t.me/animedirectoryy)"), force_document=True, thumb=thum
+               filz_channel_id, file=ok, force_document=True, thumb=thum
         )
         await nnn.edit(mm + " Encoded Successfully✅",                   
                        buttons=[]

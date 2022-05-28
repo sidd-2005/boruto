@@ -98,9 +98,9 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("SubsPlease", " ")
+        hh = hh.replace("[SubsPlease]", " ")
         gg = hh
-        gg = gg.replace("[]", " ")
+        gg = gg.replace("SubsPlease", " ")
         ss = gg
         ss = ss.replace("_", " ")          
         jj = ss

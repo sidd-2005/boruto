@@ -57,6 +57,37 @@ async def encod(event):
                 return await event.reply("`This Video File is already Compressed 😑😑.`")
         except BaseException:
             pass
+        if WORKING or QUEUE:
+
+            xxx = await event.reply("`Adding To Queue`")
+
+            # id = pack_bot_file_id(event.media)
+
+            doc = event.media.document
+
+            if doc.id in list(QUEUE.keys()):
+
+                return await xxx.edit("`THIS FILE ALREADY IN QUEUE`")
+
+            name = event.file.name
+
+            if not name:
+
+                name = "video_" + dt.now().isoformat("_", "seconds") + ".mp4"
+
+            QUEUE.update({doc.id: [name, doc]})
+
+            return await xxx.edit("`Added This File in Queue`")
+
+        WORKING.append(1)
+
+        xxx = await event.reply("`Downloading...`")
+
+        s = dt.now()
+
+        ttt = time.time()
+
+        dir = f"downloads/"
         xxx = await event.reply("`Downloading...`")
         s = dt.now()
         ttt = time.time()

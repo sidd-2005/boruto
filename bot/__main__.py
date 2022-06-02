@@ -222,7 +222,7 @@ async def _(e):
 
 async def something():
 
-    for i in itertools.count():
+    for i in range(99999999999999):
 
         try:
 

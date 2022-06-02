@@ -104,23 +104,64 @@ async def something():
                 e = await bot.send_message(encode_channel_id, "𝐷𝑜𝑤𝑛𝑙𝑜𝑑𝑖𝑛𝑔📥 𝑄𝑢𝑒𝑢𝑒 𝐹𝑖𝑙𝑒𝑠📂")
                 dl, file = QUEUE[list(QUEUE.keys())[0]]
                 s = dt.now()
-                tt = time.time()
-                dl = "downloads/" + dl
-                with open(dl, "wb") as f:
-                    ok = await download_file(
-                        client=bot,
-                        location=file,
-                        out=f,
-                        progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                            progress(
-                                d,
-                                t,
-                                e,
-                                tt,
-                                "𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕𝕚𝕟𝕘📥 𝕥𝕠 𝕄𝕪 𝕊𝕖𝕣𝕧𝕖𝕣🖥️",
-                            )
-                        ),
-                    )
+                try:
+
+                    if isinstance(QUEUE[list(QUEUE.keys())[0]], str):
+
+                        dl = await fast_download(
+
+                            e, list(QUEUE.keys())[0], QUEUE[list(QUEUE.keys())[0]]
+
+                        )
+                        else:
+
+                        dl, file = QUEUE[list(QUEUE.keys())[0]]
+
+                        tt = time.time()
+
+                        dl = "downloads/" + dl
+
+                        with open(dl, "wb") as f:
+
+                            ok = await download_file(
+
+                                client=bot,
+
+                                location=file,
+
+                                out=f,
+
+                                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
+
+                                    progress(
+
+                                        d,
+
+                                        t,
+
+                                        e,
+
+                                        tt,
+
+                                        f"**📥 Downloading**\n__{dl.replace(f'downloads/', '')}__",
+
+                                    )
+
+                                ),
+                                except Exception as r:
+
+                    LOGS.info(r)
+
+                    WORKING.clear()
+
+                    QUEUE.pop(list(QUEUE.keys())[0])
+
+                            
+                           
+   
+                           
+
+                    
                 es = dt.now()
                 kk = dl.split("/")[-1]
                 hh = kk

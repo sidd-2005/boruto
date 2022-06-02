@@ -100,8 +100,8 @@ async def something():
     for i in range(9999999999999999999999999):  # ik very weird way 😅😅
         try:
             if not WORKING and QUEUE:
-                user = int(OWNER.split()[0])
-                e = await bot.send_message(user, "𝐷𝑜𝑤𝑛𝑙𝑜𝑑𝑖𝑛𝑔📥 𝑄𝑢𝑒𝑢𝑒 𝐹𝑖𝑙𝑒𝑠📂")
+                encode_channel_id = -1001528276534
+                e = await bot.send_message(encode_channel_id, "𝐷𝑜𝑤𝑛𝑙𝑜𝑑𝑖𝑛𝑔📥 𝑄𝑢𝑒𝑢𝑒 𝐹𝑖𝑙𝑒𝑠📂")
                 dl, file = QUEUE[list(QUEUE.keys())[0]]
                 s = dt.now()
                 tt = time.time()
@@ -172,9 +172,9 @@ async def something():
                             progress(d, t, nnn, ttt, "**Uᴘʟᴏᴀᴅʜɴɢ📤 Tᴏ Tᴇʟᴇɢʀᴀᴍ**")
                         ),
                     )
-                encode_channel_id = -1001783078830
+                filz_channel_id = -1001603186705
                 ds = await e.client.send_file(
-                    encode_channel_id, file=ok, caption=jj.replace("SubsPlease", "ANIMEXT"), force_document=True, thumb=thum
+                    filz_channel_id, file=ok, caption=jj.replace("SubsPlease", "ANIMEXT"), force_document=True, thumb=thum
                 )
                 await nnn.delete()
                 org = int(Path(dl).stat().st_size)

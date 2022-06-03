@@ -31,8 +31,8 @@ async def stats(e):
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
        
-encode_channel_id = "-1001552684417"
-filz_channel_id = -1001552684417
+encode_channel_id = "1001421206846"
+filz_channel_id = -1001421206846
 success_channel_id = -1001667460631
 async def encod(event):
     try:
@@ -98,13 +98,13 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]       
         hh = kk
-        hh = hh.replace("[SubsPlease]", " ")
+        hh = hh.replace("mal", " ")
         ss = hh
-        ss = ss.replace("SubsPlease", " ")          
+        ss = ss.replace("lu", " ")          
         jj = ss
-        jj = jj.replace("1080p", "[720p][Sub]")
+        jj = jj.replace("zen", "[720p][Sub]")
         gg = jj
-        gg = jj.replace("(1080p)", "[720p][Sub]")
+        gg = jj.replace("_", " ")
         mm = gg
         mm = ' '.join(mm.split()[:-1])
         rr = f"encode"

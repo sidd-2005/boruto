@@ -33,7 +33,7 @@ async def stats(e):
        
 encode_channel_id = "-1001552684417"
 filz_channel_id = -1001552684417
-status_channel_id = -1001673805981
+success_channel_id = -1001667460631
 async def encod(event):
     try:
         if not event.is_channel:
@@ -115,7 +115,7 @@ async def encod(event):
         e = xxx
         hehe = f"{out};{dl};0"
         wah = code(hehe)
-        nn = await e.client.send_message(status_channel_id,
+        nn = await e.client.send_message(success_channel_id,
             mm,
                     buttons=[
                 [Button.inline("Sᴛᴀᴛᴜs 📊", data=f"stats{wah}")],

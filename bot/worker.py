@@ -102,7 +102,7 @@ async def encod(event):
         ss = hh
         ss = ss.replace("[720p]", "[720p][10bit][HEVC][AD] ")          
         jj = ss
-        jj = jj.replace("720p", "  [720p][10bit][HEVC][AD]")
+        jj = jj.replace("_", "  ")
         gg = jj
         gg = jj.replace("_", " ")
         mm = gg

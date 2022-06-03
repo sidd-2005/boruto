@@ -98,11 +98,11 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]       
         hh = kk
-        hh = hh.replace("mal", " ")
+        hh = hh.replace("[mal", " ")
         ss = hh
         ss = ss.replace("lu", " ")          
         jj = ss
-        jj = jj.replace("zen", "  ")
+        jj = jj.replace("zen]", "  ")
         gg = jj
         gg = jj.replace("_", " ")
         mm = gg

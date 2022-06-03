@@ -30,10 +30,10 @@ async def stats(e):
     except Exception as er:
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
-       
-encode_channel_id = "-1001569508799"
-filz_channel_id = -1001569508799
-success_channel_id = -1001667460631
+
+encode_channel_id = "-1001159872623"
+filz_channel_id = -1001159872623
+status_channel_id = -1001638214016
 async def encod(event):
     try:
         if not event.is_channel:
@@ -96,17 +96,16 @@ async def encod(event):
             LOGS.info(er)
             return os.remove(dl)
         es = dt.now()
-        kk = dl.split("/")[-1]       
+        kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("[ASW]", "")
-        ss = hh
-        ss = ss.replace("ASW", " ")          
+        hh = hh.replace("SubsPlease", "ANIMEXT")
+        gg = hh
+        gg = gg.replace("SlyFox", "ANIMEXT")
+        ss = gg
+        ss = ss.replace("_", " ")          
         jj = ss
-        jj = jj.replace("_", "  ")
-        gg = jj
-        gg = jj.replace("_", " ")
-        mm = gg
-        mm = ' '.join(mm.split()[:-1])
+        jj = jj.replace("1080p", "900p x264")
+        mm = ' '.join(jj.split()[:-1])
         rr = f"encode"
         bb = f"{mm}.mkv"                       
         out = f"{rr}/{bb}"
@@ -115,7 +114,7 @@ async def encod(event):
         e = xxx
         hehe = f"{out};{dl};0"
         wah = code(hehe)
-        nn = await e.client.send_message(success_channel_id,
+        nn = await e.client.send_message(status_channel_id,
             mm,
                     buttons=[
                 [Button.inline("Sᴛᴀᴛᴜs 📊", data=f"stats{wah}")],
@@ -151,7 +150,7 @@ async def encod(event):
                 ),
             )
         ds = await e.client.send_file(
-               filz_channel_id, file=ok, force_document=True, thumb=thum
+             filz_channel_id, file=ok, caption="****" + mm.replace("ANIMEXT", "[ANIMEXT](https://t.me/Latest_Ongoing_Airing_Anime)") + " (Eng Sub)" + "****", force_document=True, thumb=thum
         )
         await nnn.edit(mm + " Encoded Successfully✅",                   
                        buttons=[]

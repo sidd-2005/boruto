@@ -102,9 +102,9 @@ async def encod(event):
         gg = hh
         gg = gg.replace("SubsPlease", " ")
         ss = gg
-        ss = ss.replace("(1080p)", "[720p][Sub]")          
+        ss = ss.replace("(1080p)", "[Sub]")          
         jj = ss
-        jj = jj.replace("1080p", "[720p][Sub]")
+        jj = jj.replace("1080p", "[Sub]")
         mm = ' '.join(jj.split()[:-1])
         rr = f"encode"
         bb = f"{mm}.mkv"                       

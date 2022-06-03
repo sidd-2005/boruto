@@ -98,9 +98,9 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]       
         hh = kk
-        hh = hh.replace("[mal lu zen]", "")
+        hh = hh.replace("SubsPlease", " ")
         ss = hh
-        ss = ss.replace("[720p]", "[720p][10bit][HEVC][AD] ")          
+        ss = ss.replace("1080p", "[1080p][Sub][AD]")          
         jj = ss
         jj = jj.replace("_", "  ")
         gg = jj

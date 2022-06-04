@@ -98,11 +98,11 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("SubsPlease", "AD")
+        hh = hh.replace("SubsPlease", " ")
         gg = hh
-        gg = gg.replace("720p", " 720p|Sub")
+        gg = gg.replace("[SubsPlease]", "  ")
         ss = gg
-        ss = ss.replace("1080p", "1080p|Sub")          
+        ss = ss.replace("ANIMEXT", " ")          
         jj = ss
         jj = jj.replace("_", " ")
         mm = ' '.join(jj.split()[:-1])

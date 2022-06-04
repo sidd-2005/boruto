@@ -98,13 +98,13 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("[SubsPlease]", " ")
+        hh = hh.replace("SubsPlease", "AD ")
         gg = hh
-        gg = gg.replace("SubsPlease", " ")
+        gg = gg.replace("(720p)", " [720p][Sub]")
         ss = gg
-        ss = ss.replace("(1080p)", "[Sub]")          
+        ss = ss.replace("720p", "[720p][Sub]")          
         jj = ss
-        jj = jj.replace("1080p", "[Sub]")
+        jj = jj.replace("_", " ")
         mm = ' '.join(jj.split()[:-1])
         rr = f"encode"
         bb = f"{mm}.mkv"                       

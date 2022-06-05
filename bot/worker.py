@@ -100,9 +100,9 @@ async def encod(event):
         hh = kk
         hh = hh.replace("SubsPlease", "  ")
         gg = hh
-        gg = gg.replace("(720p)", "  720p")
+        gg = gg.replace("720p", "  720p•x265_@Animejinx")
         ss = gg
-        ss = ss.replace("720p", " [720p(x265)]_@Animejinx")          
+        ss = ss.replace("1080p", "1080p•x265_@Animejinx")          
         jj = ss
         jj = jj.replace("_", " ")
         mm = ' '.join(jj.split()[:-1])

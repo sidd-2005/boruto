@@ -98,13 +98,13 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("[SubsPlease]", " ")
+        hh = hh.replace("SubsPlease", "  ")
         gg = hh
-        gg = gg.replace("SubsPlease", "  ")
+        gg = gg.replace("(720p)", "  720p")
         ss = gg
-        ss = ss.replace("(720p)", " 720p")          
+        ss = ss.replace("720p", " [720p(x265)]_@Animejinx")          
         jj = ss
-        jj = jj.replace("720p", "[720p(x265)]-@Funimation_Anime")
+        jj = jj.replace("_", " ")
         mm = ' '.join(jj.split()[:-1])
         rr = f"encode"
         bb = f"{mm}.mkv"                       

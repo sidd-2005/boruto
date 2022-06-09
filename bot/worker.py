@@ -56,6 +56,8 @@ async def stats(e):
 
 encode_channel_id = "-1001159872623"
 
+encod_channel_id = "-1001493866889"
+
 filz_channel_id = -1001159872623
 
 status_channel_id = -1001638214016
@@ -72,7 +74,7 @@ async def encod(event):
 
         event.sender
 
-        if str(event.sender_id) in encode_channel_id:
+        if str(event.sender_id) in encode_channel_id or encod_channel_id:
 
             return
 

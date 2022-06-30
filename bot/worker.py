@@ -304,13 +304,13 @@ async def encod(event):
 
         ds = await e.client.send_file(
 
-             filz_channel_id, file=ok, caption="**" + mm + "**" + "\n" + "`• 900p x264`" + "\n" + "`• Eng Sub`", force_document=True, thumb=thum
+             filz_channel_id, file=ok, caption="**" + mm + "**" + "\n" + "`• 900p x264 10Bit`" + "\n" + "`• Eng Sub`", force_document=True, thumb=thum
 
         )
 
         rs = await e.client.send_file(
 
-             filx_channel_id, file=ok, caption=mm + " (900p x264)" + "[" + " [ANIMEXT](https://t.me/Latest_Ongoing_Airing_Anime)" + "]", force_document=True, thumb=thum
+             filx_channel_id, file=ok, caption=mm + " (900p x264 10Bit)" + "[" + " [ANIMEXT](https://t.me/Latest_Ongoing_Airing_Anime)" + "]", force_document=True, thumb=thum
 
         )
 

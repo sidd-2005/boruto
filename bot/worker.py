@@ -304,7 +304,7 @@ async def encod(event):
 
         ds = await e.client.send_file(
 
-             filz_channel_id, file=ok, caption="**" + mm + "**" + "\n" + "`• 900p x264`" + "\n" + "`• Eng Sub`", force_document=True, thumb=thum
+             filz_channel_id, file=ok, caption="**" + mm + "**" + "\n" + "`• 900p x264 10Bit`" + "\n" + "`• Eng Sub`", force_document=True, thumb=thum
 
         )
 

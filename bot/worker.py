@@ -102,7 +102,7 @@ async def encod(event):
         gg = hh
         gg = gg.replace("SubsPlease", " ")
         ss = gg
-        ss = ss.replace("(720p)", " ")          
+        ss = ss.replace("[Erai-raws]", " ")          
         jj = ss
         jj = jj.replace("_", " ")
         mm = ' '.join(jj.split()[:-1])

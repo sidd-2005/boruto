@@ -29,7 +29,7 @@ async def stats(e):
         await e.answer(ans, cache_time=0, alert=True)
     except Exception as er:
         LOGS.info(er)
-        await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
+        await e.answer("Someting Went Wrong 🤔 @checkinggit uchihamadara\nResend Media", cache_time=0, alert=True)
 
 encode_channel_id = "-1001569508799"
 filz_channel_id = -1001569508799
@@ -98,11 +98,11 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]        
         hh = kk
-        hh = hh.replace("[SubsPlease]", "  ")
+        hh = hh.replace("[ASW]", "  ")
         gg = hh
-        gg = gg.replace("SubsPlease", " ")
+        gg = gg.replace("ASW", " ")
         ss = gg
-        ss = ss.replace("[Erai-raws]", " ")          
+        ss = ss.replace("[EMBER]", " ")          
         jj = ss
         jj = jj.replace("_", " ")
         mm = ' '.join(jj.split()[:-1])
